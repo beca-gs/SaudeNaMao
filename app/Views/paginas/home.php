@@ -1,15 +1,7 @@
 <h1><?php echo $dados['titulo']; ?></h1>
 <p><?php echo $dados['descricao'];?><p>
 
-<?php
-// Verifica se a sessão está iniciada
-if (!isset($_SESSION)) {
-    session_start();
-}
 
-// Nome do usuário (exemplo: vindo da sessão)
-$usuario = $_SESSION['usuario_nome'] ?? 'Visitante';
-?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -23,23 +15,23 @@ $usuario = $_SESSION['usuario_nome'] ?? 'Visitante';
 <body>
 
   <header>
-    <h2>Olá, <?= htmlspecialchars($usuario); ?></h2>
+    <h2>Olá,V <?= htmlspecialchars($usuario); ?></h2>
   </header>
 
   <section class="dashboard">
-    <div class="card green">
+    <div class="card green" style="cursor:pointer;" onclick="alert('Saúde Geral: Status Boa')">
       <h3>Saúde Geral</h3>
       <p>Status: Boa</p>
     </div>
-    <div class="card orange">
+    <div class="card orange" style="cursor:pointer;" onclick="alert('Coronavírus Ativo: 3 disposições')">
       <h3>Coronavírus Ativo</h3>
       <p>3 disposições</p>
     </div>
-    <div class="card blue">
+    <div class="card blue" style="cursor:pointer;" onclick="alert('Posto mais próximo: UBS Centro')">
       <h3>Posto mais próximo</h3>
       <p>UBS Centro</p>
     </div>
-    <div class="card purple">
+    <div class="card purple" style="cursor:pointer;" onclick="alert('Vacina mais próxima: É importante')">
       <h3>Vacina mais próxima</h3>
       <p>É importante</p>
     </div>

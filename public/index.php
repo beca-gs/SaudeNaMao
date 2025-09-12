@@ -59,6 +59,7 @@ echo '<hr>Último id: '.$db->ultimoIdInserido();
     <title> <?= APP_NOME ?></title>
 
    <link rel="stylesheet" href="<?=URL?>/public/bootstrap/css/bootstrap.css"/>
+   <link rel="stylesheet" href="<?=URL?>/public/css/estilos.css"/>
    
    <script src="<?URL?>/public/bootstrap/js/bootstrap.js"></script>
    
