@@ -66,9 +66,11 @@ echo '<hr>Último id: '.$db->ultimoIdInserido();
 <body>
    <?php
    include '../app/views/header.php';
-   $rotas = new Rota();
-   include '../app/views/footer.php';
-   //$rotas->url();
    ?>
+   <main class="container">
+      <?php $rotas = new Rota(); ?>
+   </main>
+   <?php include '../app/views/footer.php'; ?>
+   <?php // $rotas->url(); ?>
 </body>
 </html>

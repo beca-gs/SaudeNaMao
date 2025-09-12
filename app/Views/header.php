@@ -1,27 +1,29 @@
-<header class="bg-dark">
+<header style="background-color: #b3d9d3;">
     <div class="container">
         <nav class="navbar navbar-expand-sm navbar-dark position-relative">
-            <a class="navbar-brand" href="<?=URL?>">LOGO</a>
+            <a class="navbar-brand" href="<?=URL?>"><img src="/SaudeNaMao/public/img/logo.png" alt="Logo" style="height: 140px; margin-left: -232px;" ></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Menu alinhado à esquerda -->
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=URL?>" data-tooltip="tooltip" title="Página Inicial">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=URL?>/paginas/sobre" data-tooltip="tooltip" title="Sobre nós">Sobre nós</a>
+                 <p style="font-size: 1.5rem;"><b>Olá Maria! 👋</b></p>
                     </li>
                 </ul>
             </div>
-            <!-- Botões alinhados à direita da tela -->
-            <div class="position-absolute" style="right: 0;">
-                <a class="btn btn-info mr-3" 
-                href="<?=URL?>/usuarios/cadastrar" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
-                <a class="btn btn-info" href="<?=URL?>/usuarios/login" data-tooltip="tooltip" title="Tem uma conta? Faça login">Entrar</a>
+            <!-- Notificações e botões alinhados à direita da tela -->
+            <div class="position-absolute d-flex align-items-center" style="right: 0; top: 50%; transform: translateY(-50%);">
+                <!-- Notificações -->
+                <div class="dropdown mr-3">
+                    <button class="btn btn-light dropdown-toggle position-relative" type="button" id="dropdownNotificacoes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="/SaudeNaMao/public/img/bell.png" alt="Notificações" style="height: 45px; width: 47px;">
+                        <span class="badge badge-danger position-absolute" style="top: 0; right: 0; font-size: 0.7rem;">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownNotificacoes" style="min-width: 250px;">
+                        <span class="dropdown-item font-weight-bold">Notificações</span>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>

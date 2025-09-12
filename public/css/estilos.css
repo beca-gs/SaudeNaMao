@@ -1,0 +1,113 @@
+/* Footer Mobile Moderno */
+.footer-mobile {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	background: #fff;
+	box-shadow: 0 -2px 16px rgba(44,44,84,0.08);
+	z-index: 1050;
+}
+.footer-mobile-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+}
+.footer-mobile-item {
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #444;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.85rem;
+	padding: 6px 0 2px 0;
+	transition: color 0.2s;
+}
+.footer-mobile-item .fa {
+	font-size: 1.5rem;
+	margin-bottom: 2px;
+	color: #444;
+	transition: color 0.2s;
+}
+.footer-mobile-item.active .fa,
+.footer-mobile-item:hover .fa,
+.footer-mobile-item:focus .fa {
+	color: #7c3aed;
+}
+.footer-mobile-item.active,
+.footer-mobile-item:hover,
+.footer-mobile-item:focus {
+	color: #7c3aed;
+	text-decoration: none;
+}
+.footer-mobile-label {
+	font-size: 0.78rem;
+	margin-top: 2px;
+	text-align: center;
+	letter-spacing: 0.01em;
+}
+@media (max-width: 600px) {
+	.footer-mobile-nav {
+		max-width: 100vw;
+		padding: 0.2rem 0.2rem 0.1rem 0.2rem;
+	}
+	.footer-mobile-item .fa {
+		font-size: 1.25rem;
+	}
+	.footer-mobile-label {
+		font-size: 0.7rem;
+	}
+}
+.footer-link-item {
+	margin: 0 10px;
+}
+/* Footer links custom style */
+.footer-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	width: 100%;
+	gap: 60px;
+}
+.footer-link-item {
+	flex: 1 1 0;
+	min-width: 120px;
+	max-width: 240px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 8px 0;
+}
+.footer-links a {
+	color: #23272b;
+	background: #fff;
+	border-radius: 25px;
+	padding: 10px 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	font-size: 1.08rem;
+	text-decoration: none;
+	box-shadow: 0 2px 8px rgba(58,80,107,0.08);
+	transition: background 0.2s, color 0.2s, transform 0.2s;
+	display: inline-block;
+}
+.footer-links a:hover, .footer-links a:focus {
+	background: #5bc0be;
+	color: #fff;
+	transform: translateY(-2px) scale(1.05);
+	text-decoration: none;
+}
+
+body {
+	padding-top: 180px; /* altura aproximada do header */
+	padding-bottom: 100px; /* altura aproximada do footer */
+}
