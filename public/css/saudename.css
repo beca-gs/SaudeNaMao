@@ -1,0 +1,49 @@
+.titulo-app {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  color: #2a6f97;
+  letter-spacing: 1px;
+}
+
+.painel-informativo {
+  background: #fff;
+  border-left: 6px solid #2a8c7c;
+}
+
+.painel-card {
+  border: none;
+  background: #f9fdfc;
+  border-radius: 18px;
+  transition: box-shadow 0.2s;
+}
+.painel-card:hover {
+  box-shadow: 0 2px 16px rgba(42,140,124,0.08);
+}
+
+.btn-rounded {
+  border-radius: 24px !important;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary {
+  background: #2a6f97;
+  border: none;
+}
+.btn-success {
+  background: #4bbf73;
+  border: none;
+}
+.btn-info {
+  background: #3ec6e0;
+  border: none;
+}
+.btn-warning {
+  background: #f7b731;
+  border: none;
+  color: #fff;
+}
+
+.card img {
+  filter: drop-shadow(0 2px 4px rgba(42,140,124,0.10));
+}

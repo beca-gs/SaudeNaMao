@@ -1,6 +1,8 @@
 <?php
 include '../app/configuracao.php';
 include '../app/autoload.php';
+include '../app/Libraries/Rota.php';
+include '../app/Libraries/Database.php';
 /*
 $db= new Database;
 
@@ -18,8 +20,8 @@ $db->query("DELETE FROM posts WHERE id = :id");
 $db->bind(":id", $id);
 $db->executa();
 echo "<hr>Total Resultados: ".$db->totalResultados();
-*/
-/*
+
+
 date_default_timezone_set('America/Cuiaba');
 $id = 2;
 $usuarioId = 100;
@@ -34,8 +36,8 @@ $db->bind(":texto",$texto);
 $db->bind(":criadoEm",$criadoEm);
 
 $db->executa();
-*/
-/*
+
+
 $usuarioId = 12;
 $titulo= 'a volta de quem não foi';
 $texto = 'texto texto texto texto';
@@ -59,18 +61,16 @@ echo '<hr>Último id: '.$db->ultimoIdInserido();
     <title> <?= APP_NOME ?></title>
 
    <link rel="stylesheet" href="<?=URL?>/public/bootstrap/css/bootstrap.css"/>
-   
-   <script src="<?URL?>/public/bootstrap/js/bootstrap.js"></script>
-   
+   <link rel="stylesheet" href="<?=URL?>/public/css/estilos.css"/>
+   <link rel="stylesheet" href="<?=URL?>/public/css/saudename.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script src="<?=URL?>/public/bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
-   <?php
-   include '../app/views/header.php';
-   ?>
+   <?php include '../app/views/header.php'; ?>
    <main class="container">
-      <?php $rotas = new Rota(); ?>
+      <?php new Rota(); ?>
    </main>
    <?php include '../app/views/footer.php'; ?>
-   <?php // $rotas->url(); ?>
 </body>
 </html>
