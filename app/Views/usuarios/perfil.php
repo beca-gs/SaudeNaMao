@@ -10,7 +10,7 @@
         <i class="fa fa-camera"></i>
       </span> -->
     </div>
-    <h3 class="mt-3 mb-1" style="color:#1e293b; font-weight:700;"><?= $usuario->nome ?></h3>
+    <h3 class="mt-3 mb-1" style="color:#1e293b; font-weight:700;"></h3>
     <div class="mb-2">
       <span class="badge" style="background:#bae6fd; color:#1e293b; font-size:1rem;">Cartão SUS: 123 4567 8901 2345</span>
     </div>
@@ -25,7 +25,7 @@
   <div class="mb-4 p-3 rounded" style="background:#e0f2fe;">
     <div style="font-weight:700; color:#2563eb; margin-bottom:8px;">Informações Pessoais</div>
     <div class="row">
-      <div class="col-md-6 mb-2"><b>Nome completo:</b> <?= $usuario->nome ?></div>
+      <div class="col-md-6 mb-2"><b>Nome completo:</b></div>
       <div class="col-md-6 mb-2"><b>CPF:</b> 123.456.789-00</div>
       <div class="col-md-6 mb-2"><b>RG:</b> 1234567 SSP/RO</div>
       <div class="col-md-6 mb-2"><b>Data de nascimento:</b> 01/01/1990</div>

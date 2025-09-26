@@ -1,7 +1,17 @@
 <?php
-
 class Usuarios extends Controller
 {
+    private $usuarioModel;
+    public function index()
+    {
+        if (isset($_SESSION['usuario_id'])) {
+            // Redireciona para o perfil se estiver logado
+            URL::redirecionar('usuarios/perfil');
+        } else {
+            // Redireciona para login se não estiver logado
+            URL::redirecionar('usuarios/login');
+        }
+    }
 
     public function __construct()
     {
@@ -16,8 +26,6 @@ class Usuarios extends Controller
             $dados = [
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
-                'senha' => trim($formulario['senha']),
-                'confirma_senha' => trim($formulario['confirma_senha']),
             ];
 
             if (in_array("", $formulario)) :
@@ -45,16 +53,16 @@ class Usuarios extends Controller
                     
                 elseif ($this->usuarioModel->checarEmail($formulario['email'])) :
                     $dados['email_erro'] = 'O e-mail informado já está cadastrado';
-                elseif (strlen($formulario['senha']) < 6) :
-                    $dados['senha_erro'] = 'A senha deve ter no minimo 6 caracteres';
-                elseif ($formulario['senha'] != $formulario['confirma_senha']) :
-                    $dados['confirma_senha_erro'] = 'As senhas são diferentes';
-                else :
-                    $dados['senha'] = password_hash($formulario['senha'], PASSWORD_DEFAULT);
+                //elseif (strlen($formulario['senha']) < 6) :
+                   // $dados['senha_erro'] = 'A senha deve ter no minimo 6 caracteres';
+                //elseif ($formulario['senha'] != $formulario['confirma_senha']) :
+                    //$dados['confirma_senha_erro'] = 'As senhas são diferentes';
+                //else :
+                    //$dados['senha'] = password_hash($formulario['senha'], PASSWORD_DEFAULT);
 
                     if ($this->usuarioModel->armazenar($dados)) :
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
-                        URL::redirecionar('usuarios/login');
+                        URL::redirecionar('paginas/home');
                     else :
                         die("Erro ao armazenar usuario no banco de dados");
                     endif;
@@ -147,6 +155,20 @@ class Usuarios extends Controller
         session_destroy();
         
         URL::redirecionar('usuarios/login');
+    }
+
+    public function perfil()
+    {
+        // Lógica de autenticação e redirecionamento ANTES de qualquer view
+        if (!isset($_SESSION['usuario_id'])) {
+            URL::redirecionar('usuarios/login');
+        }
+
+        // Só depois de garantir que não haverá redirecionamento, carregue a view
+        $dados = [
+            // ...dados do perfil...
+        ];
+        $this->view('usuarios/perfil', $dados);
     }
 
 
