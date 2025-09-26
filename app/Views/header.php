@@ -1,4 +1,4 @@
-<header style="background-color: #f3f5ffff;">
+<header style="background-color: #d6e6f5;">
     <link rel="stylesheet" href="<?=URL?>/public/css/saudename.css"/>
     <div class="container">
         <nav class="navbar navbar-expand-sm navbar-dark d-flex justify-content-between align-items-center">
@@ -19,9 +19,7 @@
                 <!-- Ícone de notificações -->
                 <button id="btnNotificacoes" class="btn btn-light position-relative" style="border-radius:50%; padding:10px;">
                     <img src="<?=URL?>/public/img/bell.png" alt="Notificações" style="width:28px;">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.8rem;">
-                        3
-                    </span>
+                    <!-- Badge de notificação removida, apenas o sino será exibido -->
                 </button>
                 <!-- Aba flutuante de notificações -->
                 <div id="notificacoesDropdown" class="shadow rounded" style="display:none; position:absolute; right:0; top:48px; min-width:320px; background:#fff; z-index:2000;">

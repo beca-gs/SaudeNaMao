@@ -12,12 +12,12 @@
                 <div class="row">
                     <div class="form-group mb-3 col-md-6">
                         <label for="nome">Nome completo: <sup class="text-danger">*</sup></label>
-                        <input type="text" name="nome" id="nome" value="<?= $dados['nome'] ?>" class="form-control <?= $dados['nome_erro'] ? 'is-invalid' : '' ?>">
+                        <input type="text" name="nome" id="nome" value="<?= $dados['nome'] ?>" class="form-control ">
                         <div class="invalid-feedback"><?= $dados['nome_erro'] ?></div>
                     </div>
                     <div class="form-group mb-3 col-md-6">
                         <label for="email">E-mail: <sup class="text-danger">*</sup></label>
-                        <input type="email" name="email" id="email" value="<?= $dados['email'] ?>" class="form-control <?= $dados['email_erro'] ? 'is-invalid' : '' ?>">
+                        <input type="email" name="email" id="email" value="<?= $dados['email'] ?>" class="form-control ">
                         <div class="invalid-feedback"><?= $dados['email_erro'] ?></div>
                     </div>
                 </div>
@@ -115,9 +115,11 @@
                 <!-- Ações -->
                 <div class="row">
                     <div class="col-12">
-                        <input type="submit" value="Cadastrar" 
+                        <button type="button" onclick="window.location.href='<?=URL?>/paginas/home'" 
                             class="btn w-100 py-3"
                             style="background:#2563eb; color:#fff; font-weight:700; font-size:1.2rem; border-radius:32px; box-shadow:0 2px 8px #dbeafe; border:none;">
+                            Cadastrar
+                        </button>
                     </div>
                 </div>
             </form>

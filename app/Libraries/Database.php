@@ -57,7 +57,7 @@ class Database {
     //executa prepared statement
 
     public function executa(){
-        return $this->stmt->execute();
+        //return $this->stmt->execute();
     }//fim da função executa
     //obtem um único registro
     public function resultado(){
