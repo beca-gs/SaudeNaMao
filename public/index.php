@@ -62,9 +62,15 @@ echo '<hr>Último id: '.$db->ultimoIdInserido();
 
    <link rel="stylesheet" href="<?=URL?>/public/bootstrap/css/bootstrap.css"/>
    <link rel="stylesheet" href="<?=URL?>/public/css/estilos.css"/>
+
    <link rel="stylesheet" href="<?=URL?>/public/css/saudename.css"/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <script src="<?=URL?>/public/bootstrap/js/bootstrap.js"></script>
+
+   
+   <script src="<?URL?>/public/bootstrap/js/bootstrap.js"></script>
+   
+
 </head>
 <body>
    <?php include '../app/views/header.php'; ?>
