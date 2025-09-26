@@ -6,14 +6,14 @@ class Database {
     private $usuario = 'root';
     private $senha = '';
     private $banco = 'framework';
-    private $porta = '3307';
+    private $porta = '3306';
     private $dbh;
     private $stmt;
 
     public function __construct()
     {
         //fonte de dados ou DSN contém as informações necessárias para conectar ao banco de dados.
-        $dsn = 'mysql:host='.$this->host.';port='.$this->porta.';dbname='.$this->banco;
+        $dsn = 'mysql:host=localhost;port=3306;dbname=framework';
         $opcoes = [
             //armazena em cache a conexão para ser reutilizada, evita a sobrecarga de uma nova conexão, resultando em um aplicativo mais rápido
             PDO::ATTR_PERSISTENT => true,

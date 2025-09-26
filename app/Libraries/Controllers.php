@@ -8,7 +8,7 @@ class Controllers{
     public function view($view, $dados = []){
         $arquivo = ('../app/Views/'.$view.'.php');
         if(file_exists($arquivo)){
-            require_once $arquivo;
+            require $arquivo;
         }else{
             die("O arquivo não existe");
         }// fim do if

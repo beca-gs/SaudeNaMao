@@ -1,5 +1,10 @@
 <?php
 define('APP', dirname(__FILE__));
 define('URL', 'http://localhost/SaudeNaMao');
-define('APP_NOME', 'Aula de PHP OO com MVC');
+define('APP_NOME', 'Saúde na Mão');
 const APP_VERSAO = '1.0.0';
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'framework');
